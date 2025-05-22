@@ -1,0 +1,1 @@
+A helm repo for metric server, that just shows counter
