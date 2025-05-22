@@ -66,7 +66,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: metricapp.local
+    - host: localhost
       paths:
         - path: /
           pathType: ImplementationSpecific
@@ -102,9 +102,9 @@ readinessProbe:
 
 # This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 1
-  maxReplicas: 2
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
